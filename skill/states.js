@@ -1,10 +1,8 @@
 'use strict';
 const questions = require('./data/questions');
-const audio = require('./data/alert.mp3');
 
 let resources = {
-    questions: questions['QUESTIONS_EN_US'],
-    audio : audio
+    questions: questions['QUESTIONS_EN_US']
 };
 
 exports.register = (skill) => {
