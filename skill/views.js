@@ -5,7 +5,7 @@ const views = (() => {
     return {
         Intent : {
             Launch : {
-                ask : `Welcome`
+                ask : `Welcome Urgency, you will walk through some places, see if you can survive, got 5 seconds to answer, if not, you are not going to make it!`
             }
 
         }
