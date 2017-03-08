@@ -1,0 +1,17 @@
+{
+  "name": "urgency-voxa",
+  "version": "1.0.0",
+  "description": "Urgency test, playing audio and waiting for a response",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "voxa",
+    "urgency",
+    "player"
+  ],
+  "author": "Carlos A. Vaca Morales",
+  "license": "ISC"
+}

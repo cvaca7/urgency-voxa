@@ -1,0 +1,4 @@
+AnswerIntent {Number}
+AnswerIntent i wanna go to {Number}
+AnswerIntent go to {Number}
+AnswerIntent take me to {Number}

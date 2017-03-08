@@ -1,0 +1,16 @@
+{
+  "intents" : [
+    {
+      "intent" : "LaunchIntent"
+    },
+    {
+      "intent" : "AnswerIntent",
+      "slots" : [
+        {
+          "name": "Number",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    }
+  ]
+}
