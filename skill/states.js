@@ -32,7 +32,7 @@ exports.register = (skill) => {
             alexaEvent.model.resources.message = speechOut;
             console.log('speechOut',speechOut);
 
-            return { reply:'Intent.PlayAudio', to: 'optionsReview' , directives}
+            return { reply:'Intent.PlayAudio', to: 'optionsReview' , directives }
 
         } else if (alexaEvent.intent.name === 'AMAZON.NoIntent') {
             return { reply: 'Intent.Exit', to: 'die' };
@@ -43,7 +43,10 @@ exports.register = (skill) => {
         let res = alexaEvent.intent.params;
         console.log(res.Number);
         alexaEvent.model.resources.answer = res.Number;
-        return { reply: 'Intent.doSomething', to: 'die' }
+
+        const directives = buildStopDirective();
+
+        return { reply: 'Intent.doSomething', to: 'die', directives  }; //
     });
 
 };
@@ -63,6 +66,13 @@ function buildPlayDirective(url, index, shuffle, loop, offsetInMilliseconds) {
     directives.token = createToken(index, shuffle, loop);
     directives.url = url;
     directives.offsetInMilliseconds = offsetInMilliseconds;
+
+    return directives;
+}
+
+function buildStopDirective() {
+    const directives = {};
+    directives.type = 'AudioPlayer.Stop';
 
     return directives;
 }

@@ -1,5 +1,5 @@
 'use strict';
-
+ let timeBreak = '<break time="3s"/>';
 const views = (() => {
 
     return {
@@ -12,7 +12,7 @@ const views = (() => {
                 reprompt: 'Would you like to start?'
             },
             PlayAudio: {
-                ask: '{message}',
+                ask: '{message}' + timeBreak + '.'
             },
             doSomething: {
                 tell: 'You save your ass telling: {answer}'
